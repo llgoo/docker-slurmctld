@@ -31,4 +31,6 @@ USER root
 ADD scripts/start.sh /root/start.sh
 RUN chmod +x /root/start.sh
 
+EXPOSE 22 6817
+
 CMD ["/bin/bash","/root/start.sh"]
