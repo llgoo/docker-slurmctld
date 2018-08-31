@@ -13,7 +13,7 @@ RUN rpm -ivh ${ROOT_RPMS}/slurm-${SLURM_VERSION}.el7.x86_64.rpm \
   ${ROOT_RPMS}/slurm-perlapi-${SLURM_VERSION}.el7.x86_64.rpm && \
   rm -rf ${ROOT_RPMS}/*
 
-ADD etc/supervisord.d/slurmctld.conf /etc/supervisor/conf.d/slurmctld.conf
+ADD etc/supervisord.d/slurmctld.ini /etc/supervisord.d/slurmctld.ini
 
 # Switch to user `modules` to install EasyBuild
 USER modules
