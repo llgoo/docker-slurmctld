@@ -34,7 +34,7 @@ RUN source /etc/profile.d/z00_lmod.sh && \
 # Switch to root before run script
 USER root
 
-VOLUME [ "/etc/slurm" ]
+VOLUME [ "/sys/fs/cgroup", "/etc/slurm" ]
 
 EXPOSE 22 6817
 
