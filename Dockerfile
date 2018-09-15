@@ -34,9 +34,8 @@ RUN source /etc/profile.d/z00_lmod.sh && \
 # Switch to root before run script
 USER root
 
-ADD scripts/start.sh /root/start.sh
-RUN chmod +x /root/start.sh
+VOLUME [ "/etc/slurm" ]
 
 EXPOSE 22 6817
 
-CMD ["/bin/bash","/root/start.sh"]
+CMD ["/usr/bin/supervisord", "--nodaemon"]
