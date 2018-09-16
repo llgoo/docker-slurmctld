@@ -37,5 +37,3 @@ USER root
 VOLUME [ "/sys/fs/cgroup", "/etc/slurm" ]
 
 EXPOSE 22 6817
-
-CMD ["/usr/bin/supervisord", "--nodaemon"]
