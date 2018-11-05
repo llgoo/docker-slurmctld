@@ -3,9 +3,9 @@ FROM sinonkt/docker-slurmbase
 LABEL maintainer="oatkrittin@gmail.com"
 
 # Install slurm, slurmctld, slurm-perlapi
-RUN rpm -ivh ${ROOT_RPMS}/slurm-${SLURM_VERSION}.el7.x86_64.rpm \
-  ${ROOT_RPMS}/slurm-slurmctld-${SLURM_VERSION}.el7.x86_64.rpm \
-  ${ROOT_RPMS}/slurm-perlapi-${SLURM_VERSION}.el7.x86_64.rpm && \
+RUN rpm -ivh ${ROOT_RPMS}/slurm-${SLURM_VERSION}-1.el7.x86_64.rpm \
+  ${ROOT_RPMS}/slurm-slurmctld-${SLURM_VERSION}-1.el7.x86_64.rpm \
+  ${ROOT_RPMS}/slurm-perlapi-${SLURM_VERSION}-1.el7.x86_64.rpm && \
   rm -rf ${ROOT_RPMS}/*
 
 # Fixed ownership and permission of Slurm
