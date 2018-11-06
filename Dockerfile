@@ -10,8 +10,8 @@ RUN rpm -ivh ${ROOT_RPMS}/slurm-${SLURM_VERSION}-1.el7.x86_64.rpm \
 
 # Fixed ownership and permission of Slurm
 RUN mkdir -p /var/spool/slurm/slurmctld /var/run/slurm /var/log/slurm && \
-  chown slurm: /var/spool/slurm/slurmctld /var/run/slurm /var/log/slurm && \
-  chmod 755 /var/spool/slurm/slurmctld /var/run/slurm /var/log/slurm && \
+  chown slurm: /var/spool/slurm /var/spool/slurm/slurmctld /var/run/slurm /var/log/slurm && \
+  chmod 755 /var/spool/slurm /var/spool/slurm/slurmctld /var/run/slurm /var/log/slurm && \
   touch /var/log/slurm/slurmctld.log && \
   chown slurm: /var/log/slurm/slurmctld.log && \
   systemctl enable slurmctld
